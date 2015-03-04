@@ -8,7 +8,7 @@ import com.eviware.soapui.impl.support.HttpUtils;
 /**
  * Created by avdeev on 02.02.2015.
  */
-public class OSUserProvider extends BaseAnalyticsProvider implements UserInfoProvider{
+public class OSUserProvider extends BaseAnalyticsProvider implements UserInfoProvider {
     final private static String ANALYTICS_SERVER_URL = "https://analytics01.smartbear.com/open-source-analytics-server/analytics";
 
     @Override
@@ -21,7 +21,7 @@ public class OSUserProvider extends BaseAnalyticsProvider implements UserInfoPro
     public void trackAction(ActionDescription actionDescription) {
     }
 
-    private String prepareRequestParams (OSUserDescription osUserDescription){
+    private String prepareRequestParams(OSUserDescription osUserDescription) {
         StringBuilder sb = new StringBuilder();
         sb.append("name=");
         sb.append(HttpUtils.urlEncodeWithUtf8(osUserDescription.getName()));

@@ -216,7 +216,8 @@ public class SumbitUserInfoAction {
             if (!validateFormValues()) {
                 return false;
             }
-            Analytics.trackOSUser(getUserName(), getUserEMail());
+            // ANAL FIXME: using old version of analitycs lib..
+            // Analytics.trackOSUser(getUserName(), getUserEMail());
             return true;
         }
 
